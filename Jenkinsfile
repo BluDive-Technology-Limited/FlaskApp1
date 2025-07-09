@@ -11,7 +11,10 @@ pipeline {
         }
         stage('Trigger Base Pipeline') {
             steps {
-                build job: 'default_pipeline1'
+                build job: 'default_pipeline1', parameters: [
+                    string(name: 'GIT_URL', value: 'https://github.com/BluDive-Technology-Limited/FlaskApp1.git'),
+                    string(name: 'GIT_BRANCH', value: 'main')
+                ]
             }
         }
     }
