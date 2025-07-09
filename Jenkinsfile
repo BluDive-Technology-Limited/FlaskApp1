@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Trigger Base Pipeline') {
             steps {
-                build job: 'default_pipeline'
+                build job: 'default_pipeline1'
             }
         }
     }
